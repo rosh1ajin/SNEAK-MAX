@@ -1,0 +1,23 @@
+.nav__list{
+    display: flex;
+    align-self: center;
+  }
+  .nav__link{
+    color: var(--color-white);
+    font-size: 14px;
+  }
+  .nav__item:not(:last-child){
+    margin-right: var(--main-offset);
+  }
+  .korz-btn-img{
+    margin-left: var(--main-offset);
+    background-color: var(--color-eastbay);
+    border-radius: 0;
+    width: var(--grid-gap);
+    height: var(--grid-gap);
+  }
+  .logo{
+    font: 700 30px / 140% var(--font-family);
+    color: var(--color-white);
+    line-height: 1;
+  }
