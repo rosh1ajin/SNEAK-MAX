@@ -1,15 +1,38 @@
+/* inter-300 - cyrillic_latin */
 @font-face {
-  font-family: 'IntroDemoBlackCAPS';
-  src: url('fonts/IntroDemoBlackCAPS.eot');
-  src: url('fonts/IntroDemoBlackCAPS.eot') format('embedded-opentype'),
-       url('fonts/IntroDemoBlackCAPS.woff2') format('woff2'),
-       url('fonts/IntroDemoBlackCAPS.woff') format('woff'),
-       url('fonts/IntroDemoBlackCAPS.ttf') format('truetype'),
-       url('fonts/IntroDemoBlackCAPS.svg#IntroDemoBlackCAPS') format('svg');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter-v13-cyrillic_latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-v13-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-900 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/inter-v13-cyrillic_latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 html {
   box-sizing: border-box;
-  font-family: 'IntroDemoBlackCAPS', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 *,
 *::before,
@@ -18,7 +41,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'IntroDemoBlackCAPS', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--color-white);
 }
 img {
@@ -51,7 +74,7 @@ a {
 
 
 :root{
-  --font-family: "Intro", sans-serif;
+  --font-family: "Inter", sans-serif;
 /*COLOR*/
   --color-black: #000;
   --color-white: #fff;
@@ -147,15 +170,16 @@ a {
   height: 100%;
 }
 .hero__title{
+
   padding-top: 50px;
   margin: 0;
-  font: 600 var(--main-offset) / 140%;
+  font-size: 36px;
   color: var(--color-white);
   max-width: 50%;
   margin-bottom: var(--grid-gap);
 }
 .hero__descr{
-  font: 400 33px / 140%;
+  font-size: 16px;
   color: var(--color-white);
   max-width: 47%;
   margin-top: var(--grid-gap);
@@ -166,7 +190,7 @@ a {
   top: 50%;
   margin-top: var(--grid-gap);
   margin-left: 50px;
-  font-family: "Intro", sans-serif;;
+  font-family: "Inter", sans-serif;;
   font-weight: 700;
   font-size: 200px;
   line-height: 200px;
@@ -201,12 +225,87 @@ a {
   color: var(--color-main);
   font: 700 15px / 140% var(--font-family);
 }
+.catalog__grid{
+  max-width: 280px;
+}
+.catalog__prop{
+  margin-bottom: 20px;
+}
+.catalog__left .catalog-price__input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.catalog-price__input{
+  border: 1px solid var(--color-gray);
+  height: 50px;
+}
+.catalog-price__input:first-child{
+  border-right: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.catalog-price__input:last-child{
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.catalog-price__wrapper{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  position: relative;
+}
 
+.catalog-price__wrapper::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    height: 34px;
+    background-color: var(--color-gray);
+    transform: translateX(-50%);
+  }
+
+.catalog__input{
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__prop-inner{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__price{
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__title{
+  font-size: 30px;
+}
+.catalog__subtitle{
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.catalog__caption{
+  font-size: 12px;
+  color: var(--color-black);
+  white-space: nowrap;
+}
 .catalog__left{
+  padding: 0 20px;
   grid-column: 3 span; /* Без изменений */
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  overflow: auto;
 }
 .catalog-list{
-  margin-left: 200px;
+  margin-left: 20px;
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
   row-gap: 0px;
@@ -216,7 +315,7 @@ a {
 
 .product__image {
   position: relative;
-  width: 300%;
+  width: 250%;
   max-height: 293px;
   max-height: 280px;
 }
@@ -227,10 +326,24 @@ a {
   object-fit:cover;
 }
 
-.product__btns {
-  display: none;
+.section-hero-btn{
+  width: 140%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--color-eastbay);
+  border-radius: 4px;
 }
-
+.section-hero-btn:hover{
+  background-color: transparent;
+  color: var(--color-eastbay);
+}
 .product__title {
   text-align: left;
   width: 3000%;
