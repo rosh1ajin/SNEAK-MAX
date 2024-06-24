@@ -73,11 +73,7 @@ a {
   padding: 0px 15px;
   max-width: 1210px;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--grid-gap);
-}
+
 .title{
   margin: 0;
   margin-bottom: var(--main-offset);

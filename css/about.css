@@ -1,7 +1,8 @@
 .about__container{
     display: flex;
     position: relative;
-    align-items: flex-start;
+    align-items: center;
+    height: 100%;
 }
 .about{
     margin-top: 100px;
@@ -27,4 +28,35 @@
     height: 100%;
     max-width: none;
     transform: rotate(-15deg) translateX(-50%);
+}
+.about__text{
+    width: 34%;
+    transform: translateY(100px);
+}
+.about__title{
+    margin-bottom: 30px;
+    color: white;
+}
+.about__descr{
+    color: white;
+}
+.about__author{
+    align-items: center;
+    transform: translateX(50px);
+    display: flex;
+    line-height: 22px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 20px;
+    &::before{
+        content: "";
+        display: inline-block;
+        margin-right: 30px;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+    }
+}
+.about__figure{
+    position: absolute;
 }

@@ -1,0 +1,52 @@
+.team{
+    margin-top: 100px;
+    background-color: var(--color-eastbay);
+}
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    z-index: 5;
+}
+
+.team__item {
+    flex-basis: calc(33.33% - 20px);
+    background-color: var(--color-eastbay);
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team__img {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.team__subtitle, .team__post {
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+    text-align:center
+}
+
+.team__subtitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+.team__title{
+    margin-top: 20px;
+    color: white;
+}
+.team__figure{
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    max-width: 20%;
+}
